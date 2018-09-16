@@ -6,14 +6,17 @@
 #include <fcntl.h>
 //You may also add more include directives as well.
 
-//THIS VALUE CANNOT BE CHANGED.
-//You should use this value when creating your buffer.
-// And also to limit the amount each read CAN do.
+// THIS VALUE CANNOT BE CHANGED.
+// You should use this value when creating your buffer.
+// And also to limit the amount of bytes each read CAN do.
 #define BUFF_MAX 13
+// DO NOT CHANGE ABOVE
+
+
 
 int
 main(int argc, char const *argv[])
 {
 
-	return 0;
+    return 0;
 }
