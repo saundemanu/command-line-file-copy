@@ -9,8 +9,8 @@
 // THIS VALUE CANNOT BE CHANGED.
 // You should use this value when creating your buffer.
 // And also to limit the amount of bytes each read CAN do.
-#define BUFF_MAX 13
-// DO NOT CHANGE ABOVE
+#define BUFF_MAX 21
+// ABOVE VALUE CANNOT BE CHANGED //
 
 
 
