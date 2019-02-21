@@ -13,6 +13,7 @@
 // ABOVE VALUE CANNOT BE CHANGED //
 
 #define FNAME_MAX 64
+#define DEBUG 0
 
 int
 main(int argc, char const *argv[])
@@ -36,9 +37,10 @@ main(int argc, char const *argv[])
     ifilename[strcspn(ifilename, "\n")] = 0;
     ofilename[strcspn(ofilename, "\n")] = 0;  
 
-// opening files
+// setting file descriptors/opening files
     
      fin = open(ifilename, O_RDONLY, O_TRUNC);
+    // check if input file exists
      if(fin < 0){
          perror("Error");
          return -1; 
@@ -49,17 +51,19 @@ main(int argc, char const *argv[])
 // data transfer 
   
     while((dataRead = read(fin, buf, BUFF_MAX)) > 0){
+        //prints out buffer for debuging
+        if(DEBUG == 1){printf("%s", buf);}
     if((dataWritten = write(fout, buf, dataRead)) != dataRead){
        fsize+= 21 - dataWritten;
         break;
     }
     fsize+=21; 
     }
-
+//close files, deallocate descriptors, record
     close(fin);
     close(fout);
 
-    printf("Filecopy Successful,  %zi bytes copied \n", fsize); 
+    printf("Filecopy Successful, %zi bytes copied \n", fsize); 
 
     return 0;
 }
