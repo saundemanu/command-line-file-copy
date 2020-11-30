@@ -1,8 +1,4 @@
-# CSC 415 - Project 2 - File copy
-
-## Student Name : Emanuel Saunders
-
-## Student ID   : 917273245
+Bash File Copy 
 
 ## Build Instructions
 
